@@ -1,0 +1,1 @@
+All of the chips work as they should, according to the Hardware Simulator.

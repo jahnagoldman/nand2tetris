@@ -1,0 +1,2455 @@
+<class>
+<keyword> class </keyword>
+<identifier> Snake </identifier>
+<symbol> { </symbol>
+<classVarDec>
+<keyword> field </keyword>
+<identifier> Array</identifier>
+<identifier> snakeparts</identifier>
+<symbol> ; </symbol>
+</classVarDec>
+<classVarDec>
+<keyword> field </keyword>
+<keyword> int</keyword>
+<identifier> maxlength</identifier>
+<symbol> , </symbol>
+<identifier> currlength</identifier>
+<symbol> ; </symbol>
+</classVarDec>
+<classVarDec>
+<keyword> field </keyword>
+<keyword> int</keyword>
+<identifier> length</identifier>
+<symbol> , </symbol>
+<identifier> pelletlength</identifier>
+<symbol> ; </symbol>
+</classVarDec>
+<classVarDec>
+<keyword> field </keyword>
+<keyword> int</keyword>
+<identifier> pelletx</identifier>
+<symbol> , </symbol>
+<identifier> pellety</identifier>
+<symbol> ; </symbol>
+</classVarDec>
+<classVarDec>
+<keyword> field </keyword>
+<keyword> int</keyword>
+<identifier> seedx</identifier>
+<symbol> , </symbol>
+<identifier> seedy</identifier>
+<symbol> ; </symbol>
+</classVarDec>
+<classVarDec>
+<keyword> field </keyword>
+<keyword> int</keyword>
+<identifier> random</identifier>
+<symbol> ; </symbol>
+</classVarDec>
+<identifier> random </identifier>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> length </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 5 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> pelletlength </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 5 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> currlength </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 5 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> maxlength </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> nLength </identifier>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> snakeparts </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> Array</identifier>
+<symbol> .</symbol>
+<identifier> new </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<identifier> maxlength </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> pelletx </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 100 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> pellety </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 100 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> seedx </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 15 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> seedy </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 25 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> random </identifier>
+<symbol> ; </symbol>
+<expression>
+<term>
+</term>
+</expression>
+<symbol> = </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> random </identifier>
+<symbol> ; </symbol>
+<expression>
+<term>
+</term>
+</expression>
+<symbol> = </symbol>
+ </letStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> createFirst</identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> draw</identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> setInitScore</identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> drawPellet</identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<returnStatement>
+ <keyword> return </keyword>
+<expression>
+<term>
+<keyword> this </keyword>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> void</keyword>
+<identifier> dispose </identifier>
+<symbol> ( </symbol>
+<parameterList>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<varDec>
+ <keyword> var </keyword>
+<keyword> int </keyword>
+<identifier> n</identifier>
+<symbol> ; </symbol>
+ </varDec>
+<varDec>
+ <keyword> var </keyword>
+<identifier> SnakePart</identifier>
+<identifier> sl</identifier>
+<symbol> ; </symbol>
+ </varDec>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> n </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 0 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<whileStatement>
+ <keyword>while</keyword>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> n </identifier>
+</term>
+<symbol> &lt; </symbol>
+<term>
+<identifier> currlength </identifier>
+</term>
+</expression>
+<symbol>)</symbol>
+<symbol>{</symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> sl </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> snakeparts </identifier>
+<symbol> [ </symbol>
+<expression>
+<term>
+<identifier> n </identifier>
+</term>
+</expression>
+<symbol> ] </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> sl</identifier>
+<symbol> .</symbol>
+<identifier> dispose </identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> n </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> n </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<integerConstant> 1 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+</statements>
+<symbol>}</symbol>
+ </whileStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> Memory</identifier>
+<symbol> .</symbol>
+<identifier> deAlloc </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<identifier> snakeparts </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> Memory</identifier>
+<symbol> .</symbol>
+<identifier> deAlloc </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<keyword> this </keyword>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<returnStatement>
+ <keyword> return </keyword>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> void</keyword>
+<identifier> createFirst </identifier>
+<symbol> ( </symbol>
+<parameterList>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<varDec>
+ <keyword> var </keyword>
+<keyword> int </keyword>
+<identifier> startx</identifier>
+<symbol> , </symbol>
+<identifier> starty</identifier>
+ </varDec>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> startx </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 20 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> starty </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 20 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> startdirection </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 4 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> n </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 0 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<whileStatement>
+ <keyword>while</keyword>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> n </identifier>
+</term>
+<symbol> &lt; </symbol>
+<term>
+<identifier> currlength </identifier>
+</term>
+</expression>
+<symbol>)</symbol>
+<symbol>{</symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> snakeparts </identifier>
+<symbol> [ </symbol>
+<expression>
+<term>
+<identifier> n </identifier>
+</term>
+</expression>
+<symbol> ] </symbol>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> SnakePart</identifier>
+<symbol> .</symbol>
+<identifier> new </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<identifier> startx </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> n </identifier>
+</term>
+<symbol> * </symbol>
+<term>
+<integerConstant> 2 </integerConstant>
+</term>
+<symbol> * </symbol>
+<term>
+<identifier> length </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> starty </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> length </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> startdirection </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> n </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> n </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<integerConstant> 1 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+</statements>
+<symbol>}</symbol>
+ </whileStatement>
+<returnStatement>
+ <keyword> return </keyword>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> boolean</keyword>
+<identifier> movable </identifier>
+<symbol> ( </symbol>
+<parameterList>
+<keyword> int</keyword>
+<identifier> current </identifier>
+<symbol> , </symbol>
+<keyword> int</keyword>
+<identifier> new </identifier>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<statements>
+<ifStatement>
+ <keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<identifier> new </identifier>
+</term>
+<symbol> = </symbol>
+<term>
+<integerConstant> 0 </integerConstant>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<returnStatement>
+ <keyword> return </keyword>
+<expression>
+<term>
+<keyword> true </keyword>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+ </ifStatement>
+<ifStatement>
+ <keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<identifier> current </identifier>
+</term>
+<symbol> = </symbol>
+<term>
+<identifier> new </identifier>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<returnStatement>
+ <keyword> return </keyword>
+<expression>
+<term>
+<keyword> false </keyword>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+ </ifStatement>
+<ifStatement>
+ <keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> current </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> new </identifier>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+<symbol> = </symbol>
+<term>
+<integerConstant> 3 </integerConstant>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+<symbol> | </symbol>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> current </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> new </identifier>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+<symbol> = </symbol>
+<term>
+<integerConstant> 7 </integerConstant>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<returnStatement>
+ <keyword> return </keyword>
+<expression>
+<term>
+<keyword> false </keyword>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+ </ifStatement>
+<returnStatement>
+ <keyword> return </keyword>
+<expression>
+<term>
+<keyword> true </keyword>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> boolean</keyword>
+<identifier> move </identifier>
+<symbol> ( </symbol>
+<parameterList>
+<keyword> int</keyword>
+<identifier> direction </identifier>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<varDec>
+ <keyword> var </keyword>
+<keyword> int </keyword>
+<identifier> n</identifier>
+<symbol> ; </symbol>
+ </varDec>
+<varDec>
+ <keyword> var </keyword>
+<keyword> int </keyword>
+<identifier> previousDirection</identifier>
+<symbol> ; </symbol>
+ </varDec>
+<varDec>
+ <keyword> var </keyword>
+<identifier> SnakePart</identifier>
+<identifier> first</identifier>
+<symbol> ; </symbol>
+ </varDec>
+<varDec>
+ <keyword> var </keyword>
+<identifier> SnakePart</identifier>
+<identifier> f</identifier>
+ </varDec>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> gameEnd </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> checkGameEnd</identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<ifStatement>
+ <keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<identifier> gameEnd </identifier>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<returnStatement>
+ <keyword> return </keyword>
+<expression>
+<term>
+<keyword> false </keyword>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+ </ifStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> n </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 0 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> first </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> snakeparts </identifier>
+<symbol> [ </symbol>
+<expression>
+<term>
+<identifier> currlength </identifier>
+</term>
+<symbol> - </symbol>
+<term>
+<integerConstant> 1 </integerConstant>
+</term>
+</expression>
+<symbol> ] </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> firstDirection </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> first</identifier>
+<symbol> .</symbol>
+<identifier> getDirection </identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> movable </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> movable</identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<identifier> firstDirection </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> direction </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<ifStatement>
+ <keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<symbol> ~</symbol>
+<term>
+<identifier> movable </identifier>
+</term>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<returnStatement>
+ <keyword> return </keyword>
+<expression>
+<term>
+<keyword> true </keyword>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+ </ifStatement>
+<whileStatement>
+ <keyword>while</keyword>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> n </identifier>
+</term>
+<symbol> &lt; </symbol>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> currlength </identifier>
+</term>
+<symbol> - </symbol>
+<term>
+<integerConstant> 1 </integerConstant>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+</expression>
+<symbol>)</symbol>
+<symbol>{</symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> f </identifier>
+<symbol> { </symbol>
+<expression>
+<term>
+</term>
+</expression>
+<symbol> = </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> f </identifier>
+<symbol> ; </symbol>
+<expression>
+<term>
+</term>
+</expression>
+<symbol> = </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> previousDirection </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> f </identifier>
+</term>
+</expression>
+<symbol> = </symbol>
+ </letStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> f</identifier>
+<symbol> . </symbol>
+ </doStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> n </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> n </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<integerConstant> 1 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+</statements>
+<symbol>}</symbol>
+ </whileStatement>
+<ifStatement>
+ <keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<symbol> ~</symbol>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> direction </identifier>
+</term>
+<symbol> = </symbol>
+<term>
+<integerConstant> 0 </integerConstant>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> first</identifier>
+<symbol> .</symbol>
+<identifier> setDirection </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<identifier> direction </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+</statements>
+<symbol> } </symbol>
+ </ifStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> n </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 0 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<whileStatement>
+ <keyword>while</keyword>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> n </identifier>
+</term>
+<symbol> &lt; </symbol>
+<term>
+<identifier> currlength </identifier>
+</term>
+</expression>
+<symbol>)</symbol>
+<symbol>{</symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> f </identifier>
+<symbol> { </symbol>
+<expression>
+<term>
+</term>
+</expression>
+<symbol> = </symbol>
+ </letStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> f</identifier>
+<symbol> . </symbol>
+ </doStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> n </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> n </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<integerConstant> 1 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+</statements>
+<symbol>}</symbol>
+ </whileStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> firstX </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> first</identifier>
+<symbol> .</symbol>
+<identifier> getX </identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> firstY </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> first</identifier>
+<symbol> .</symbol>
+<identifier> getY </identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<ifStatement>
+ <keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> firstX </identifier>
+</term>
+<symbol> &lt; </symbol>
+<term>
+<identifier> pelletx </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> length </identifier>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+<symbol> &amp; </symbol>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> firstX </identifier>
+</term>
+<symbol> &gt; </symbol>
+<term>
+<identifier> pelletx </identifier>
+</term>
+<symbol> - </symbol>
+<term>
+<identifier> length </identifier>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+<symbol> &amp; </symbol>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> firstY </identifier>
+</term>
+<symbol> &gt; </symbol>
+<term>
+<identifier> pellety </identifier>
+</term>
+<symbol> - </symbol>
+<term>
+<identifier> length </identifier>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+<symbol> &amp; </symbol>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> firstY </identifier>
+</term>
+<symbol> &lt; </symbol>
+<term>
+<identifier> pellety </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> length </identifier>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> firstDirection </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> first</identifier>
+<symbol> .</symbol>
+<identifier> getDirection </identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> eat</identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<identifier> firstDirection </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> firstX </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> firstY </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> increaseScore</identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+</statements>
+<symbol> } </symbol>
+ </ifStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> draw</identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> Sys</identifier>
+<symbol> .</symbol>
+<identifier> wait </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<integerConstant> 75 </integerConstant>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<returnStatement>
+ <keyword> return </keyword>
+<expression>
+<term>
+<keyword> true </keyword>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> boolean</keyword>
+<identifier> checkGameEnd </identifier>
+<symbol> ( </symbol>
+<parameterList>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<varDec>
+ <keyword> var </keyword>
+<identifier> SnakePart</identifier>
+<identifier> head</identifier>
+<symbol> ; </symbol>
+ </varDec>
+<varDec>
+ <keyword> var </keyword>
+<keyword> int </keyword>
+<identifier> headX</identifier>
+<symbol> ; </symbol>
+ </varDec>
+<varDec>
+ <keyword> var </keyword>
+<keyword> int </keyword>
+<identifier> headY</identifier>
+<symbol> ; </symbol>
+ </varDec>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> head </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> snakeparts </identifier>
+<symbol> [ </symbol>
+<expression>
+<term>
+<identifier> currlength </identifier>
+</term>
+<symbol> - </symbol>
+<term>
+<integerConstant> 1 </integerConstant>
+</term>
+</expression>
+<symbol> ] </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> headX </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> head</identifier>
+<symbol> .</symbol>
+<identifier> getX </identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> headY </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> head</identifier>
+<symbol> .</symbol>
+<identifier> getY </identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<ifStatement>
+ <keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> headX </identifier>
+</term>
+<symbol> &lt; </symbol>
+<term>
+<integerConstant> 15 </integerConstant>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+<symbol> | </symbol>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> headX </identifier>
+</term>
+<symbol> &gt; </symbol>
+<term>
+<integerConstant> 496 </integerConstant>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+<symbol> | </symbol>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> headY </identifier>
+</term>
+<symbol> &lt; </symbol>
+<term>
+<integerConstant> 15 </integerConstant>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+<symbol> | </symbol>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> headY </identifier>
+</term>
+<symbol> &gt; </symbol>
+<term>
+<integerConstant> 245 </integerConstant>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> Screen</identifier>
+<symbol> .</symbol>
+<identifier> clearScreen </identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> Output</identifier>
+<symbol> .</symbol>
+<identifier> moveCursor </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<integerConstant> 20 </integerConstant>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<integerConstant> 20 </integerConstant>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> Output</identifier>
+<symbol> .</symbol>
+<identifier> printString </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<stringConstant> Game Over. </stringConstant>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<returnStatement>
+ <keyword> return </keyword>
+<expression>
+<term>
+<keyword> true </keyword>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+ </ifStatement>
+<returnStatement>
+ <keyword> return </keyword>
+<expression>
+<term>
+<keyword> false </keyword>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> boolean</keyword>
+<identifier> eat </identifier>
+<symbol> ( </symbol>
+<parameterList>
+<keyword> int</keyword>
+<identifier> firstDirection </identifier>
+<symbol> , </symbol>
+<keyword> int</keyword>
+<identifier> firstX </identifier>
+<symbol> , </symbol>
+<keyword> int</keyword>
+<identifier> firstY </identifier>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<varDec>
+ <keyword> var </keyword>
+<keyword> int </keyword>
+<identifier> x</identifier>
+<symbol> ; </symbol>
+ </varDec>
+<varDec>
+ <keyword> var </keyword>
+<keyword> int </keyword>
+<identifier> y</identifier>
+<symbol> ; </symbol>
+ </varDec>
+<varDec>
+ <keyword> var </keyword>
+<identifier> SnakePart</identifier>
+<identifier> first</identifier>
+<symbol> ; </symbol>
+ </varDec>
+<statements>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> erasePellet</identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<ifStatement>
+ <keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<identifier> currlength </identifier>
+</term>
+<symbol> &lt; </symbol>
+<term>
+<identifier> maxlength </identifier>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<ifStatement>
+ <keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<identifier> firstDirection </identifier>
+</term>
+<symbol> = </symbol>
+<term>
+<integerConstant> 1 </integerConstant>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> snakeparts </identifier>
+<symbol> [ </symbol>
+<expression>
+<term>
+<identifier> currlength </identifier>
+</term>
+</expression>
+<symbol> ] </symbol>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> SnakePart</identifier>
+<symbol> .</symbol>
+<identifier> new </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<identifier> firstX </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> firstY </identifier>
+</term>
+<symbol> - </symbol>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> length </identifier>
+</term>
+<symbol> * </symbol>
+<term>
+<integerConstant> 2 </integerConstant>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> length </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> firstDirection </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+</statements>
+<symbol> } </symbol>
+ </ifStatement>
+<ifStatement>
+ <keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<identifier> firstDirection </identifier>
+</term>
+<symbol> = </symbol>
+<term>
+<integerConstant> 2 </integerConstant>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> snakeparts </identifier>
+<symbol> [ </symbol>
+<expression>
+<term>
+<identifier> currlength </identifier>
+</term>
+</expression>
+<symbol> ] </symbol>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> SnakePart</identifier>
+<symbol> .</symbol>
+<identifier> new </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<identifier> firstX </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> firstY </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> length </identifier>
+</term>
+<symbol> * </symbol>
+<term>
+<integerConstant> 2 </integerConstant>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> length </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> firstDirection </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+</statements>
+<symbol> } </symbol>
+ </ifStatement>
+<ifStatement>
+ <keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<identifier> firstDirection </identifier>
+</term>
+<symbol> = </symbol>
+<term>
+<integerConstant> 3 </integerConstant>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> snakeparts </identifier>
+<symbol> [ </symbol>
+<expression>
+<term>
+<identifier> currlength </identifier>
+</term>
+</expression>
+<symbol> ] </symbol>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> SnakePart</identifier>
+<symbol> .</symbol>
+<identifier> new </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<identifier> firstX </identifier>
+</term>
+<symbol> - </symbol>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> length </identifier>
+</term>
+<symbol> * </symbol>
+<term>
+<integerConstant> 2 </integerConstant>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> firstY </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> length </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> firstDirection </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+</statements>
+<symbol> } </symbol>
+ </ifStatement>
+<ifStatement>
+ <keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<identifier> firstDirection </identifier>
+</term>
+<symbol> = </symbol>
+<term>
+<integerConstant> 4 </integerConstant>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> snakeparts </identifier>
+<symbol> [ </symbol>
+<expression>
+<term>
+<identifier> currlength </identifier>
+</term>
+</expression>
+<symbol> ] </symbol>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> SnakePart</identifier>
+<symbol> .</symbol>
+<identifier> new </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<identifier> firstX </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> length </identifier>
+</term>
+<symbol> * </symbol>
+<term>
+<integerConstant> 2 </integerConstant>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> firstY </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> length </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> firstDirection </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+</statements>
+<symbol> } </symbol>
+ </ifStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> currlength </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> currlength </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<integerConstant> 1 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+</statements>
+<symbol> } </symbol>
+<keyword> else </keyword>
+<symbol> { </symbol>
+<statements>
+<returnStatement>
+ <keyword> return </keyword>
+<expression>
+<term>
+<keyword> false </keyword>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+ </ifStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> drawPellet</identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<returnStatement>
+ <keyword> return </keyword>
+<expression>
+<term>
+<keyword> true </keyword>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> void</keyword>
+<identifier> drawPellet </identifier>
+<symbol> ( </symbol>
+<parameterList>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<varDec>
+ <keyword> var </keyword>
+<keyword> int </keyword>
+<identifier> nX</identifier>
+<symbol> ; </symbol>
+ </varDec>
+<varDec>
+ <keyword> var </keyword>
+<keyword> int </keyword>
+<identifier> nY</identifier>
+<symbol> ; </symbol>
+ </varDec>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> nX </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> random </identifier>
+</term>
+</expression>
+<symbol> = </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> pelletx </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> nX </identifier>
+</term>
+<symbol> - </symbol>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> nX </identifier>
+</term>
+<symbol> / </symbol>
+<term>
+<integerConstant> 480 </integerConstant>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+<symbol> * </symbol>
+<term>
+<integerConstant> 480 </integerConstant>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> seedx </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> pelletx </identifier>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> nY </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> random </identifier>
+</term>
+</expression>
+<symbol> = </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> pellety </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> nY </identifier>
+</term>
+<symbol> - </symbol>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> nY </identifier>
+</term>
+<symbol> / </symbol>
+<term>
+<integerConstant> 240 </integerConstant>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+<symbol> * </symbol>
+<term>
+<integerConstant> 240 </integerConstant>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> seedy </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> pellety </identifier>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> Screen</identifier>
+<symbol> .</symbol>
+<identifier> setColor </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<keyword> true </keyword>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> Screen</identifier>
+<symbol> .</symbol>
+<identifier> drawRectangle </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<identifier> pelletx </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> pellety </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> pelletx </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> pelletlength </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> pellety </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> length </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<returnStatement>
+ <keyword> return </keyword>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> void</keyword>
+<identifier> erasePellet </identifier>
+<symbol> ( </symbol>
+<parameterList>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<statements>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> Screen</identifier>
+<symbol> .</symbol>
+<identifier> setColor </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<keyword> false </keyword>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> Screen</identifier>
+<symbol> .</symbol>
+<identifier> drawRectangle </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<identifier> pelletx </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> pellety </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> pelletx </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> pelletlength </identifier>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<identifier> pellety </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<identifier> length </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<returnStatement>
+ <keyword> return </keyword>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> void</keyword>
+<identifier> draw </identifier>
+<symbol> ( </symbol>
+<parameterList>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<varDec>
+ <keyword> var </keyword>
+<identifier> SnakePart</identifier>
+<identifier> spart</identifier>
+<symbol> ; </symbol>
+ </varDec>
+<varDec>
+ <keyword> var </keyword>
+<keyword> int </keyword>
+<identifier> n</identifier>
+<symbol> ; </symbol>
+ </varDec>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> n </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 0 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<whileStatement>
+ <keyword>while</keyword>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> n </identifier>
+</term>
+<symbol> &lt; </symbol>
+<term>
+<identifier> currlength </identifier>
+</term>
+</expression>
+<symbol>)</symbol>
+<symbol>{</symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> spart </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> snakeparts </identifier>
+<symbol> [ </symbol>
+<expression>
+<term>
+<identifier> n </identifier>
+</term>
+</expression>
+<symbol> ] </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> spart</identifier>
+<symbol> .</symbol>
+<identifier> draw </identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> n </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> n </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<integerConstant> 1 </integerConstant>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+</statements>
+<symbol>}</symbol>
+ </whileStatement>
+<returnStatement>
+ <keyword> return </keyword>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> void</keyword>
+<identifier> setInitScore </identifier>
+<symbol> ( </symbol>
+<parameterList>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> score </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 0 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> Output</identifier>
+<symbol> .</symbol>
+<identifier> moveCursor </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<integerConstant> 1 </integerConstant>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<integerConstant> 1 </integerConstant>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> Output</identifier>
+<symbol> .</symbol>
+<identifier> printString </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<stringConstant> Score:  </stringConstant>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> Output</identifier>
+<symbol> .</symbol>
+<identifier> printInt </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<identifier> score </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<returnStatement>
+ <keyword> return </keyword>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> void</keyword>
+<identifier> increaseScore </identifier>
+<symbol> ( </symbol>
+<parameterList>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> score </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> score </identifier>
+</term>
+<symbol> + </symbol>
+<term>
+<integerConstant> 5 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> Output</identifier>
+<symbol> .</symbol>
+<identifier> moveCursor </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<integerConstant> 1 </integerConstant>
+</term>
+</expression>
+<symbol> , </symbol>
+<expression>
+<term>
+<integerConstant> 1 </integerConstant>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> Output</identifier>
+<symbol> .</symbol>
+<identifier> printString </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<stringConstant> Score:  </stringConstant>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> Output</identifier>
+<symbol> .</symbol>
+<identifier> printInt </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<identifier> score </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<returnStatement>
+ <keyword> return </keyword>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<symbol> } </symbol>
+</class>

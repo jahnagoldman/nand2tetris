@@ -1,0 +1,501 @@
+<class>
+<keyword> class </keyword>
+<identifier> SnakeGame </identifier>
+<symbol> { </symbol>
+<classVarDec>
+<keyword> field </keyword>
+<identifier> Snake</identifier>
+<identifier> snake</identifier>
+<symbol> ; </symbol>
+</classVarDec>
+<subroutineDec>
+<keyword> constructor </keyword>
+<identifier> SnakeGame </identifier>
+<identifier> new </identifier>
+<symbol> ( </symbol>
+<parameterList>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> snake </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> Snake</identifier>
+<symbol> .</symbol>
+<identifier> new </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<integerConstant> 20 </integerConstant>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<returnStatement>
+ <keyword> return </keyword>
+<expression>
+<term>
+<keyword> this </keyword>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> void</keyword>
+<identifier> run </identifier>
+<symbol> ( </symbol>
+<parameterList>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<varDec>
+ <keyword> var </keyword>
+<keyword> char </keyword>
+<identifier> key</identifier>
+<symbol> ; </symbol>
+ </varDec>
+<varDec>
+ <keyword> var </keyword>
+<keyword> int </keyword>
+<identifier> direction</identifier>
+<symbol> ; </symbol>
+ </varDec>
+<varDec>
+ <keyword> var </keyword>
+<keyword> boolean </keyword>
+<identifier> moved</identifier>
+<symbol> , </symbol>
+<identifier> exit</identifier>
+<symbol> ; </symbol>
+ </varDec>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> exit </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<keyword> false </keyword>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<whileStatement>
+ <keyword>while</keyword>
+<symbol>(</symbol>
+<expression>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<symbol> ~</symbol>
+<term>
+<identifier> exit </identifier>
+</term>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+<symbol> &amp; </symbol>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> key </identifier>
+</term>
+<symbol> = </symbol>
+<term>
+<integerConstant> 0 </integerConstant>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+</expression>
+<symbol>)</symbol>
+<symbol>{</symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> key </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> Keyboard</identifier>
+<symbol> .</symbol>
+<identifier> keyPressed </identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> moved </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> snake</identifier>
+<symbol> .</symbol>
+<identifier> move </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<integerConstant> 0 </integerConstant>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<ifStatement>
+ <keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<symbol> ~</symbol>
+<term>
+<identifier> moved </identifier>
+</term>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> exit </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<keyword> true </keyword>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<returnStatement>
+ <keyword> return </keyword>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+ </ifStatement>
+<ifStatement>
+ <keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<identifier> key </identifier>
+</term>
+<symbol> = </symbol>
+<term>
+<integerConstant> 81 </integerConstant>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> exit </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<keyword> true </keyword>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+</statements>
+<symbol> } </symbol>
+ </ifStatement>
+<ifStatement>
+ <keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<identifier> key </identifier>
+</term>
+<symbol> = </symbol>
+<term>
+<integerConstant> 131 </integerConstant>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> direction </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 1 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+</statements>
+<symbol> } </symbol>
+ </ifStatement>
+<ifStatement>
+ <keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<identifier> key </identifier>
+</term>
+<symbol> = </symbol>
+<term>
+<integerConstant> 133 </integerConstant>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> direction </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 2 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+</statements>
+<symbol> } </symbol>
+ </ifStatement>
+<ifStatement>
+ <keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<identifier> key </identifier>
+</term>
+<symbol> = </symbol>
+<term>
+<integerConstant> 130 </integerConstant>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> direction </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 3 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+</statements>
+<symbol> } </symbol>
+ </ifStatement>
+<ifStatement>
+ <keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<identifier> key </identifier>
+</term>
+<symbol> = </symbol>
+<term>
+<integerConstant> 132 </integerConstant>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> direction </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<integerConstant> 4 </integerConstant>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+</statements>
+<symbol> } </symbol>
+ </ifStatement>
+<whileStatement>
+ <keyword>while</keyword>
+<symbol>(</symbol>
+<expression>
+<term>
+<symbol> ~</symbol>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier> key </identifier>
+</term>
+<symbol> = </symbol>
+<term>
+<integerConstant> 0 </integerConstant>
+</term>
+</expression>
+<symbol> )</symbol>
+</term>
+</term>
+</expression>
+<symbol>)</symbol>
+<symbol>{</symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> key </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> Keyboard</identifier>
+<symbol> .</symbol>
+<identifier> keyPressed </identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> moved </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<identifier> snake</identifier>
+<symbol> .</symbol>
+<identifier> move </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<identifier> direction </identifier>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+<ifStatement>
+ <keyword> if </keyword>
+<symbol> ( </symbol>
+<expression>
+<term>
+<symbol> ~</symbol>
+<term>
+<identifier> moved </identifier>
+</term>
+</term>
+</expression>
+<symbol> ) </symbol>
+<symbol> { </symbol>
+<statements>
+<letStatement>
+ <keyword>let</keyword>
+<identifier> exit </identifier>
+<symbol> = </symbol>
+<expression>
+<term>
+<keyword> true </keyword>
+</term>
+</expression>
+<symbol> ; </symbol>
+ </letStatement>
+</statements>
+<symbol> } </symbol>
+ </ifStatement>
+</statements>
+<symbol>}</symbol>
+ </whileStatement>
+</statements>
+<symbol>}</symbol>
+ </whileStatement>
+<returnStatement>
+ <keyword> return </keyword>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword> method </keyword>
+<keyword> void</keyword>
+<identifier> dispose </identifier>
+<symbol> ( </symbol>
+<parameterList>
+</parameterList>
+<symbol> ) </symbol>
+<subroutineBody>
+<symbol> { </symbol>
+<statements>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> snake</identifier>
+<symbol> .</symbol>
+<identifier> dispose </identifier>
+<symbol> ( </symbol>
+<expressionList>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<doStatement>
+ <keyword> do </keyword>
+<identifier> Memory</identifier>
+<symbol> .</symbol>
+<identifier> deAlloc </identifier>
+<symbol> ( </symbol>
+<expressionList>
+<expression>
+<term>
+<keyword> this </keyword>
+</term>
+</expression>
+</expressionList>
+<symbol> ) </symbol>
+<symbol> ; </symbol>
+ </doStatement>
+<returnStatement>
+ <keyword> return </keyword>
+<symbol> ; </symbol>
+ </returnStatement>
+</statements>
+<symbol> } </symbol>
+</subroutineBody>
+</subroutineDec>
+<symbol> } </symbol>
+</class>
