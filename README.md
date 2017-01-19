@@ -10,3 +10,5 @@ Includes the following:
 * Compiler, written in Java, compiling the Jack programming language into VM language code
 * A Snake game, written in the simple Jack programming language, that can run on the final computer system
 
+## Issues I'm Working On
+* The Compiler (both parts - Project 10 and 11) passes the dry tests that come with Nand2Tetris, but there are some wet tests not provided with the course that it throws an infinite loop in. I'm thinking this is due to the comment parsing.
